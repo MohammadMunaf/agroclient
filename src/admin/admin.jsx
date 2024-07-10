@@ -11,9 +11,9 @@ export default function Admin() {
                     <h2>Admin</h2>
                 </div>
                 <div >
-                    <Button><Link to={`http://localhost:3000/upload`} style={{ textDecorationLine: 'none' }}>upload</Link></Button>
-                    <Button><Link to={`http://localhost:3000/adminProductList`} style={{ textDecorationLine: 'none' }}>uploaded Products</Link></Button>
-                    <Button><Link to={`http://localhost:3000/`} style={{ textDecorationLine: 'none' }}>Product List</Link></Button>
+                    <Button><Link to={`/upload`} style={{ textDecorationLine: 'none' }}>upload</Link></Button>
+                    <Button><Link to={`/adminProductList`} style={{ textDecorationLine: 'none' }}>uploaded Products</Link></Button>
+                    <Button><Link to={`/`} style={{ textDecorationLine: 'none' }}>Product List</Link></Button>
                 </div>
             </div>
         </div>
