@@ -1,0 +1,36 @@
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    position: sticky;
+    background-color:rgb(34, 33, 33) ;
+    color: #fff;
+    height: 76px;
+    top:0;
+    width: '100%';
+    z-Index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.navbar a:hover {
+    color: #ccc;
+}
+
+.navbar svg {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.navbar .MuiSvgIcon-root {
+    fill: #fff;
+}
+
+/* rgb(29, 58, 81) */

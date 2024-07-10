@@ -1,0 +1,9 @@
+.adminBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.AdminContent{
+    text-align: center;
+}
