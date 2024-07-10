@@ -14,8 +14,9 @@ To set up the project on your local PC, follow these steps:
 - Run the following commands:
   ```sh
   npm install
-  npm start -->By this steps frontend run locally and connect with backend online.
-  To connnect backend locally go to src-->url.js and change baseurl.
+  npm start
+- By this steps frontend run locally and connect with backend online.
+  To connect backend locally go to src-->url.js and change baseurl.
 
 ## Testing the Application
 
