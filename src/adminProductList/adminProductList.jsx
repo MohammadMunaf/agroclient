@@ -14,6 +14,7 @@ import Navbar from '../components/navbar/navbar';
 import WebhookIcon from '@mui/icons-material/Webhook';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import SnowshoeingIcon from '@mui/icons-material/Snowshoeing';
+import { baseUrl } from '../url';
 
 
 export default function AdminProductList() {
@@ -34,7 +35,7 @@ export default function AdminProductList() {
     const [alldata, setallData] = useState([]);
     const [Arrangedata, setArrangeData] = useState("");
     const fetchData = (value) => {
-        Axios.get(`http://localhost:3001/products/?q=${value}`)
+        Axios.get(`${baseUrl}/products/?q=${value}`)
             .then((response) => {
                 setallproduct(response.data);
                 setallData(response.data);
