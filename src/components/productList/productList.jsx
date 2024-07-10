@@ -4,6 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import './productList.css'
 import Axios from 'axios';
+import { baseUrl } from '../../url';
 import ManIcon from '@mui/icons-material/Man';
 import CandlestickChartIcon from '@mui/icons-material/CandlestickChart';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
@@ -29,7 +30,7 @@ export default function ProductList() {
     const [alldata, setallData] = useState([]);
     const [Arrangedata, setArrangeData] = useState("");
     const fetchData = (value) => {
-        Axios.get(`http://localhost:3001/products/?q=${value}`)
+        Axios.get(`${baseUrl}/products/?q=${value}`)
             .then((response) => {
                 setallproduct(response.data);
                 setallData(response.data);

@@ -2,6 +2,7 @@ import Axios from 'axios';
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import './upload.css';
+import { baseUrl } from '../../url';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
@@ -31,7 +32,7 @@ export default function Upload() {
             formData.images.push(img);
         }
         console.log(formData);
-        Axios.post(`http://localhost:3001/upload`, formData)
+        Axios.post(`${baseUrl}/upload`, formData)
             .then((response) => {
                 console.log(response);
                 setformData({

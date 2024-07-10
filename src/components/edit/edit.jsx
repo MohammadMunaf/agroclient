@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom"
 import './edit.css'
+import { baseUrl } from "../../url";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
@@ -21,7 +22,7 @@ export default function EditPage() {
         category: ""
     })
     useEffect(() => {
-        axios.get(`http://localhost:3001/edit/${id}`)
+        axios.get(`${baseUrl}/edit/${id}`)
             .then((res) => {
                 setEditData({
                     id: res.data.id || "",
@@ -45,7 +46,7 @@ export default function EditPage() {
             }))
     }
     const handleSubmit = () => {
-        axios.patch(`http://localhost:3001/edit/${id}`, editData)
+        axios.patch(`${baseUrl}/edit/${id}`, editData)
             .then((res) => {
                 setEditData({
                     id:"",
