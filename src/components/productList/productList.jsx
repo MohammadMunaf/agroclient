@@ -192,11 +192,10 @@ export default function ProductList() {
                         </div>
                         <div className='productContainer'>
                             {Array.isArray(allproduct) && allproduct.map(product => (
-                                <Card sx={{ width: 250, height: 340, boxShadow: 'none', marginRight: '49px' }} className='product' key={product._id}>
+                                <Card className='product' sx={{boxShadow: 'none'}}  key={product._id}>
                                         <CardMedia
                                             component="img"
                                             alt="green iguana"
-                                            height="265"
                                             image={product.images[0]}
                                         />
                                         <div className="newArrivalProductDetails" style={{ color: 'GrayText', textAlign: 'center' }}>

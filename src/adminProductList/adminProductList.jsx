@@ -198,7 +198,7 @@ export default function AdminProductList() {
                         </div>
                         <div className='productContainer'>
                             {Array.isArray(allproduct) && allproduct.map(product => (
-                                <Card sx={{ width: 250, height: 350, boxShadow: 'none', marginRight: '49px' }} className='product' key={product._id}>
+                                <Card className='product' sx={{boxShadow: 'none' }}  key={product._id}>
                            
                                         <CardMedia
                                             component="img"
@@ -212,8 +212,7 @@ export default function AdminProductList() {
                                                 <h2 style={{ margin: '3px', color: 'rgb(29, 58, 81)' }}><CurrencyRupeeIcon style={{ fontSize: '15px' }} />{product.price}</h2>
                                             </span>
                                         </div>
-                        
-                                    <Button onClick={()=>handleEdit(product._id)} style={{ backgroundColor: 'red', color: 'white', borderRadius: '5px', width: '2%', height: '2%',fontSize:'9px'}}>Edit</Button>
+                                    <Button onClick={()=>handleEdit(product._id)} style={{ backgroundColor: 'red', color: 'white', borderRadius: '5px', width: '2%', height: '2%',fontSize:'9px',marginTop:'-50px'}}>Edit</Button>
                                 </Card>
                             ))}
                         </div>
