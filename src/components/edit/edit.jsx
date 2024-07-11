@@ -29,7 +29,8 @@ export default function EditPage() {
                     Name: res.data.name || "",
                     Description: res.data.description || "",
                     price: res.data.price || "",
-                    category: res.data.category || ""
+                    category: res.data.category || "",
+                    images:[]
                 })
                 setimage(res.data.images);
                 //console.log(res);
@@ -46,8 +47,9 @@ export default function EditPage() {
             }))
     }
     const handleSubmit = () => {
-        editData.images=image;
-        //console.log(editData);
+        for(let img of image){
+            editData.images.push(img);
+        }
         axios.patch(`${baseUrl}/edit/${id}`, editData)
             .then((res) => {
                 setEditData({

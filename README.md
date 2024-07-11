@@ -17,6 +17,7 @@ To set up the project on your local PC, follow these steps:
   npm start
 - By this steps frontend run locally and connect with backend online.
   To connect backend locally go to src-->url.js and change baseurl.
+- Refresh or wait 2-4 secoends to load data from backend
 
 ## Testing the Application
 
