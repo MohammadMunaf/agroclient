@@ -31,7 +31,7 @@ export default function Upload() {
         for (let img of image) {
             formData.images.push(img);
         }
-        console.log(formData);
+        //console.log(formData);
         Axios.post(`${baseUrl}/upload`, formData)
             .then((response) => {
                 console.log(response);

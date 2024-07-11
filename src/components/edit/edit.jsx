@@ -46,10 +46,8 @@ export default function EditPage() {
             }))
     }
     const handleSubmit = () => {
-        image.forEach((ele)=>{
-            editData.images.push(ele);
-        })
-        // editData.images=image;
+        editData.images=image;
+        //console.log(editData);
         axios.patch(`${baseUrl}/edit/${id}`, editData)
             .then((res) => {
                 setEditData({
